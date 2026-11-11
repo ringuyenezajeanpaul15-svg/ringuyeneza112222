@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Group 3 IoT Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- MQTT.js -->
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>GROUP 3 IoT MONITORING SYSTEM</h1>
+    <p>ESP32 Temperature & Humidity Dashboard</p>
+</header>
+
+<div class="status">
+    <span id="connection">Connecting to HiveMQ...</span>
+</div>
+
+<section class="cards">
+
+    <div class="card">
+        <h2>Temperature</h2>
+        <h1><span id="temperature">--</span> °C</h1>
+        <p>Live Temperature</p>
+    </div>
+
+    <div class="card">
+        <h2>Humidity</h2>
+        <h1><span id="humidity">--</span> %</h1>
+        <p>Live Humidity</p>
+    </div>
+
+</section>
+
+<section class="graphs">
+
+    <div class="chart-box">
+        <h2>Temperature History</h2>
+        <canvas id="temperatureChart"></canvas>
+    </div>
+
+    <div class="chart-box">
+        <h2>Humidity History</h2>
+        <canvas id="humidityChart"></canvas>
+    </div>
+
+</section>
+
+<footer>
+    <p>Last Update: <span id="lastUpdate">Waiting for data...</span></p>
+    <p>GROUP 3 | ESP32 | MQTT | HiveMQ</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
